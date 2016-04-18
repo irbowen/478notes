@@ -74,15 +74,28 @@
 - Relation
   - A mapping of ordered pairs
 
-### Properties
+#### Properties
 - Reflexive
   - R is reflexive if a R a for every a in A
 - Symmetric
   - R is symmetric if a R b implies that b R a
 - Antisymmetric
   - R is antisymmetric if a R b and b R a implies that a = b
-  - Not the same as not symmetric 
+  - Not the same as not symmetric
 - Transitive
+  - R is transitive if a R b and b R c implies that a R c
+- **Compatibility Relation** - Reflexive and Symmetric
+  - Need not be transitive
+- **Equivalence Relation** - Reflexive, Symmetric, Transitive
+  - \# (pi): number of blocks
+  - p (pi): number of elements in largest block
+  - Subset of the Compatibility Relation
+
+#### Partial Orderings
+#### Partial Ordered Sets
+#### Lattices
+#### Boolean Algebra
+
 
 
 ## Branch and Bound
