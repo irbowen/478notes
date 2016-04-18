@@ -1,3 +1,90 @@
+## Basics
+- PMOS and NMOS transistors have voltages applied to them that are not interchangeable. Only PMOS transistors can be used in the pull up circuit, and only NMOS transistors can be used in the pull down circuit.
+
+### AND
+| A | B |Out|
+|---|---|---|
+| 0 | 0 | 0 |
+| 0 | 1 | 0 |
+| 1 | 0 | 0 |
+| 1 | 1 | 1 |
+
+### NAND
+| A | B |Out|
+|---|---|---|
+| 0 | 0 | 1 |
+| 0 | 1 | 1 |
+| 1 | 0 | 1 |
+| 1 | 1 | 0 |
+
+### OR
+| A | B |Out|
+|---|---|---|
+| 0 | 0 | 0 |
+| 0 | 1 | 1 |
+| 1 | 0 | 1 |
+| 1 | 1 | 1 |
+
+### NOR
+| A | B |Out|
+|---|---|---|
+| 0 | 0 | 1 |
+| 0 | 1 | 0 |
+| 1 | 0 | 0 |
+| 1 | 1 | 0 |
+
+### XOR
+| A | B |Out|
+|---|---|---|
+| 0 | 0 | 0 |
+| 0 | 1 | 1 |
+| 1 | 0 | 1 |
+| 1 | 1 | 0 |
+
+### XNOR
+| A | B |Out|
+|---|---|---|
+| 0 | 0 | 1 |
+| 0 | 1 | 0 |
+| 1 | 0 | 0 |
+| 1 | 1 | 1 |
+
+## Terms you should know
+- Gate
+- Combinational circuit
+- Truth table
+- Boolean algebra
+- Boolean function
+- **Minterm**
+  - A minterm is 1 for exactly one input combination
+  - It can be implemented by a single AND gate
+- **Maxterm**
+  - A maxterm is 0 for exactly one input combination
+  - It can be implemented by a single OR gate
+- Prime implicant
+- Two-level design
+- Karnaugh map (Kmap)
+- Latch and flipflop
+- State table
+- Sequential circuit
+
+## Sets, Relations, Partial Orderings, Lattices
+- Set
+  - A collection of elements
+- Relation
+  - A mapping of ordered pairs
+
+### Properties
+- Reflexive
+  - R is reflexive if a R a for every a in A
+- Symmetric
+  - R is symmetric if a R b implies that b R a
+- Antisymmetric
+  - R is antisymmetric if a R b and b R a implies that a = b
+  - Not the same as not symmetric 
+- Transitive
+
+
 ## Branch and Bound
 Branching
 - Decompose into sequence of subproblems
@@ -20,6 +107,8 @@ WEAK DIVISION
 Algebraic
 boolean
 
+unate
+
 - Algebraic Expression: an expression in which no cube contains another cube
   - a + bc is
   - a + ab is not
@@ -27,6 +116,8 @@ boolean
   - F and G have "disjoint" sets, no common variabls
   - F and G are algebraic expressions
   - Otherwise, FG is called a "boolean product"
+
+
 
 ### Kernels
 - Kernels provide a way to find common sub-expressions using weak division
@@ -41,6 +132,8 @@ boolean
   - K(f) = { g such that g exists D(f) and g id cube-free }
 - The **co-kernel** of *k=f/c* is the cube *c*.  
   - co-kernels are not unique
+- Kernel generation is accomplished through repeated weak division
+  - We will repeadetly divide by each term, until only cube-free expressions remain
 
 Example
   - F = abcd + abdce + efg
@@ -59,5 +152,22 @@ Example
   - Find the matching library patterns for each node, record is cost
   - Select set of matches or cover for C with the lowest overall cost
 
+## Minimization
+- Literal Count:
+  - TODO: Look at lecture 2 to confirm this
+  - Calculat the literal counts of the following boolean expressions:
+    - abc + bcd + ef + a'b'c
+    - (a + b + c)(a + e)(a' + c')
+    - ab(c + d) + af + a'
+- State Minimization
+  - Distinguishable States
+    - Given M1 in an intial state S1, and M2 in initial state S2.
+    - States S1 and S2 are **distinguishable** iff there is at least one input sequence X such that the output of the two systems if different
+      - X is a **distinguishable sequence** for S1, S2
+    - S1 and S2 are **k-distinguishable** if X's length is at most *k*
+    - S1 and S2 are **k-equivalent** if thye are not k-distinguishable
+    - S1 and S2 are **equivalent**, denoted S1=S2, iff all outputs are equal for all input sequences X
+  - Algorithm: TODO
 
 
+## Stochastic Circuits
