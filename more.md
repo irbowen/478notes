@@ -69,9 +69,11 @@ Example
 - Literal Count:
   - TODO: Look at lecture 2 to confirm this
   - Calculat the literal counts of the following boolean expressions:
-    - abc + bcd + ef + a'b'c
-    - (a + b + c)(a + e)(a' + c')
-    - ab(c + d) + af + a'
+  ```
+    abc + bcd + ef + a'b'c
+    (a + b + c)(a + e)(a' + c')
+    ab(c + d) + af + a'
+    ```
 - State Minimization
   - Distinguishable States
     - Given M1 in an intial state S1, and M2 in initial state S2.
