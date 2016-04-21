@@ -1,9 +1,25 @@
 ## Basics
 - PMOS and NMOS transistors have voltages applied to them that are not interchangeable. Only PMOS transistors can be used in the pull up circuit, and only NMOS transistors can be used in the pull down circuit.
-
 - **Boole Shannon Expansion Thm**
-- __* Sup Brah *__
+- Sets that are functionally complete
+  - AND, OR, NOT
+  - NAND
+  - NOR
+  - OR, NOT
+  - XOR, NOT is NOT functionally completes
 
+## Early Defintions
+- In Boolean logic, an *implicant* is a "covering" (sum term or product term) of one or more minterms in a sum of products (or maxterms in a product of sums) of a Boolean function
+
+## SOP to POS Conversion
+- Distributivity
+  - x(y+z) = xy + xz
+  - x + yz = (x + z)(x + z)
+- Example
+  - z = ab + cd
+  - (ab + c)(ab +d)
+  - (c + ab)(d + ab)
+  - (c + a)(c + b)(d + a)(d + b)
 
 ## Terms you should know
 - Gate

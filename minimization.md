@@ -1,12 +1,5 @@
 ## Minimization
-- Literal Count:
-  - TODO: Look at lecture 2 to confirm this
-  - Calculate the literal counts of the following boolean expressions:
-  ```
-    abc + bcd + ef + a'b'c
-    (a + b + c)(a + e)(a' + c')
-    ab(c + d) + af + a'
-    ```
+
 - State Minimization
   - Distinguishable States
     - Given M1 in an initial state S1, and M2 in initial state S2.
@@ -15,4 +8,29 @@
     - S1 and S2 are **k-distinguishable** if X's length is at most *k*
     - S1 and S2 are **k-equivalent** if thye are not k-distinguishable
     - S1 and S2 are **equivalent**, denoted S1=S2, iff all outputs are equal for all input sequences X
-  - Algorithm: TODO
+  - State equivalence is a equivalence relation: reflexive, transitive, symmetric
+
+  - Algorithm:
+    - Method seen in class
+    - Method with table and loops
+      - Does it end up in the same subsection as me?
+
+  - Incompetely Specified FSM:
+    - We only care about compatability, not whether its an exact match.
+    - Compatability means that it matches where the outputs are specified.
+    - Two states are compatible if 
+      - They produce the same output where both outputs are specified
+      - They go to the compatible next states where both next states are specified.
+
+
+
+
+- Literal Count:
+  - TODO: Look at lecture 2 to confirm this
+  - Calculate the literal counts of the following boolean expressions:
+  ```
+    abc + bcd + ef + a'b'c
+    (a + b + c)(a + e)(a' + c')
+    ab(c + d) + af + a'
+    ```
+-
