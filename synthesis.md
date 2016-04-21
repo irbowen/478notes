@@ -72,8 +72,10 @@ Example
 - ASAP: As Soon As Possible
   - Do the computation as soon as the inputs are available
   - Assume unlimited number of gates
+  - Calculates minimum start times
 - ALAP: As Late As Possible
   - Do the calculation as late as possible to still hit the maximum delay
+  - Calculates maximum start times
 - The difference between a gates ASAP and ALAP position is referred to as its slack
 - The critical path determines latency
 

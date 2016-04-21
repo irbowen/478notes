@@ -19,6 +19,7 @@
     - Use column dominace, and delete the dominating column
 - Quine-McCusivty
 - Petricks
+  - Finds all covers
 - Branch and Bound
 - Heuristic
 
