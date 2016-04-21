@@ -1,3 +1,8 @@
+## Setup
+- From SOP or POS
+- AND OR becomes NAND NAND
+- OR AND becomes NOR NOR
+
 ## Design Constraints
 - Area
 - Delay
